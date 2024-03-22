@@ -1,0 +1,47 @@
+// LOCALHOST
+### Get all Attendance records
+GET http://localhost:3000/attendance_data
+
+
+### Get Attendance by id
+GET http://localhost:3000/attendance_data/65fa099afb2b5460882bebe5
+
+
+### Create Attendance
+POST http://localhost:3000/attendance_data HTTP/1.1
+content-type: appliacation/json
+
+    {
+
+        "firstName": "Anderson",
+        "lastName": "Smith",
+        "email": "asmith@gmail.com",
+        "phone": "44332211",
+        "service_name": "Bible Study",
+        "date": "17th May, 2023",
+        "sign_in": "3:26pm",
+        "sign_out": "6:21pm"
+    }
+
+
+
+
+### PUT Attendance
+PUT http://127.0.0.1:3000/attendance_data/65fa0ae1fb2b5460882bebe6 HTTP/1.1
+content-type: appliacation/json
+
+    {
+
+        "firstName": "Hope",
+        "lastName": "Frank",
+        "email": "hopefrank@gmail.com",
+        "phone": "11223344",
+        "service_name": "Bible Study",
+        "date": "7th July, 2023",
+        "sign_in": "4:39pm",
+        "sign_out": "7:38pm"
+    }
+
+
+### DELETE Attendance record
+DELETE http://localhost:3000/attendance_data/65fa0ae1fb2b5460882bebe6 HTTP/1.1
