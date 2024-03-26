@@ -8,11 +8,10 @@ const attendanceController = require('../controllers/attendance_data')
 
 router.get('/', attendanceController.getAll);
 router.get('/:id', attendanceController.getSingle);
-router.post('/', isAuthenticated, attendanceController.createAttendance);
-router.put('/:id', isAuthenticated, attendanceController.updateAttendance);
-router.delete('/:id', isAuthenticated, attendanceController.deleteAttendance);
+router.post('/', isAuthenticated, attendanceValidation, attendanceController.createAttendance);
+router.put('/:id', isAuthenticated, attendanceValidation, attendanceController.updateAttendance);
+router.delete('/:id', isAuthenticated, attendanceValidation, attendanceController.deleteAttendance);
 
 
 
 module.exports = router; 
-
